@@ -3,10 +3,10 @@ resource "google_service_account" "default" {
   display_name = "Service Account"
 }
 
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "vm" {
   name         = "test"
   machine_type = "e2-medium"
-  zone         = "us-central1-a"
+  zone         = "us-central1-b"
 
   tags = ["foo", "bar"]
 
