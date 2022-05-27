@@ -1,0 +1,17 @@
+name: tfscan
+on: [pull_request]
+
+jobs:
+  tfscan:
+    name: tfsec
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # - name: tfsec
+      #   uses: aquasecurity/tfsec-action@v1.0.0
+      #   with:
+      #     soft_fail: true
+      - name: tfsec PR commenter
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+        with:
+          github_token: ${{ github.token }}
