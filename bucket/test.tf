@@ -12,3 +12,9 @@ resource "google_storage_bucket" "auto-expire" {
     }
   }
 }
+
+resource "google_storage_bucket" "b" {
+  name          = "bucket"
+  location      = "US"
+  force_destroy = true
+}
