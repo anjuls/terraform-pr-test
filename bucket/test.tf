@@ -14,7 +14,14 @@ resource "google_storage_bucket" "auto-expire" {
 }
 
 resource "google_storage_bucket" "b" {
-  name          = "bucket"
+  name          = "bucket1"
   location      = "US"
   force_destroy = true
 }
+
+resource "google_storage_bucket" "c" {
+  name          = "bucket2"
+  location      = "US"
+  force_destroy = true
+}
+
